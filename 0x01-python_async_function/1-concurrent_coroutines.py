@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+'''Execute multiple coroutines at the same time with async
+'''
 
 import asyncio
 from typing import List
@@ -13,4 +15,4 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     wait_times = await asyncio.gather(
         *tuple(map(lambda _: wait_random(max_delay), range(n)))
     )
-    return(wait_times)
+    return sorted(wait_times)
