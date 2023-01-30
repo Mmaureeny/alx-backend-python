@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+''' Coroutine called async_generator that takes no arguments.
+'''
 
 import asyncio
 import random
